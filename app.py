@@ -177,7 +177,8 @@ if st.button("Generar vista previa profesional"):
             os.unlink(tmp_path)
 
     import io
-    pdf_bytes = io.BytesIO(pdf.output()).getvalue()
+    pdf_bytes = pdf.output(dest='S').encode("latin-1")
+                        
     st.download_button(
         label="Descargar PDF",
         data=pdf_bytes,

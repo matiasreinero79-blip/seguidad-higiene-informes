@@ -179,7 +179,7 @@ if st.button("Generar vista previa profesional"):
     pdf_bytes = pdf.output()
     st.download_button(
         label="Descargar PDF",
-        data=bytes(pdf_bytes),
+        data=pdf_bytes,
         file_name=f"informe_{empresa}_{fecha}.pdf",
         mime="application/pdf"
     )

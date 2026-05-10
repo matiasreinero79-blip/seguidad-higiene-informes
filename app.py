@@ -176,7 +176,7 @@ if st.button("Generar vista previa profesional"):
             pdf.ln(3)
             os.unlink(tmp_path)
 
-    pdf_bytes = pdf.output()
+    pdf_bytes = bytes(pdf.output())
     st.download_button(
         label="Descargar PDF",
         data=pdf_bytes,
